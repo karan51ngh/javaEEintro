@@ -1,6 +1,6 @@
 # javaEEintro
 
-## Add 2 Numbers
+### Add 2 Numbers
 
 1. Set up a Java EE development environment with an Apache Tomcat server and an IDE such as Eclipse or IntelliJ IDEA.
 2. Create a new Java servlet project in your IDE.
@@ -15,6 +15,21 @@
 11. Use JavaScript or jQuery to make an HTTP post request to the servlet with the two numbers as parameters.
 12. Handle the response from the servlet, which should be the result of the addition operation.
 13. Display the result to the user in the client-side web page.
+
+### web.xml file
+
+web.xml, also known as the Deployment Descriptor, is a configuration file for Java Servlet-based applications.
+It provides information about the web application to the application server, including the mapping of servlets, JSP files, and static resources.
+
+web.xml file used, to map the servlet to a URL pattern in the web.xml file. This allows you to access the servlet through a specific URL instead of having to hardcode the servlet class name in the client-side code. To map the servlet in web.xml, you need to specify the servlet name, servlet class, and URL pattern in the following format:
+
+The web.xml file is used to:
+
+-Define the context root and welcome page of the application.
+-Map servlets to URL patterns.
+-Set security constraints and authentication methods.
+-Configure error pages and welcome files.
+-Specify initialization parameters for servlets and JSP files.
 
 ### Get and Post Method
 - GET and POST methods in HTTP, which are used to send requests from a client (such as a web browser) to a server.
