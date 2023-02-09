@@ -1,4 +1,4 @@
-# javaEEintro
+# Java Enterprise Edition Introduction
 
 ### Add 2 Numbers
 
@@ -63,3 +63,17 @@ To enforce the handling of only POST method requests, the doPost() method should
 -In a servlet, the `request` and `response` objects are typically passed as arguments to the `service` method, and are created by the servlet container (such as Apache Tomcat). 
 
 -You do not need to create the objects yourself, but you can access and modify the values in the objects as needed for your application.
+
+# Servlet Request Forwarding
+
+-When a client sends a request to a servlet `S1`, it is accompanied by request and response objects `req1` and `res1`. 
+
+-Instead of sending a response directly to the client, `S1` can use a `RequestDispatcher` to forward the request to another servlet `S2` along with the same `req1` and `res1` objects. 
+
+-`S2` will then send the response back to the client using `res1`. 
+The client is unaware of which servlet actually sent the response.
+
+-If you want the client to be aware that the request has been redirected, you can use the `sendRedirect` method instead of a `RequestDispatcher`. 
+
+-In the case of a `RequestDispatcher`, the request is simply forwarded, while in the case of `sendRedirect`, 
+the client is informed and instructed to access `S2`.
