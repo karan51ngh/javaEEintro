@@ -55,7 +55,6 @@ To enforce the handling of only POST method requests, the doPost() method should
 6. ALso add a new mapping to the web.xml file.
 
 ### Servlet Request and Response
-# Servlet Request and Response
 
 -The `request` object holds the data sent from the client to the server in the form of HTTP request parameters, headers, and other information. 
 
