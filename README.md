@@ -77,3 +77,12 @@ The client is unaware of which servlet actually sent the response.
 
 -In the case of a `RequestDispatcher`, the request is simply forwarded, while in the case of `sendRedirect`, 
 the client is informed and instructed to access `S2`.
+
+### HttpSession
+
+-Session is a mechanism used in web applications to store information about a user's session on a website.
+-This information is stored on the server and is associated with a unique session ID. 
+-This ID is sent to the client as a cookie, and the client uses it to send the session ID back to the server with each subsequent request. 
+-This allows the server to associate the incoming request with a specific session, and to retrieve the session data for that user. 
+-This allows the server to maintain state across multiple requests, which is useful for tracking user preferences, keeping track of a shopping cart, or managing user authentication. 
+-The session data is stored on the server and is typically stored in memory, but it can also be stored in a database or other persistent storage mechanism.
