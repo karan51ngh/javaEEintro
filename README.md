@@ -2,19 +2,18 @@
 
 ### Add 2 Numbers
 
-1. Set up a Java EE development environment with an Apache Tomcat server and an IDE such as Eclipse or IntelliJ IDEA.
-2. Create a new Java servlet project in your IDE.
-3. Create a new servlet class, for example, "AddNumbersServlet".
-4. Override the `service()` method in the servlet class. This method will handle the post request from the client browser.
-5. In the `service()` method, extract the two numbers from the request parameters.
-6. Perform the addition operation on the two numbers.
-7. Store the result in a variable.
-8. Write the result back to the client browser using the response object.
-9. Map the servlet to a specific URL in the web.xml file.
-10. Create an HTML form in a client-side web page that allows the user to enter two numbers.
-11. Use JavaScript or jQuery to make an HTTP post request to the servlet with the two numbers as parameters.
-12. Handle the response from the servlet, which should be the result of the addition operation.
-13. Display the result to the user in the client-side web page.
+1. Set up a Java EE development environment with an Apache Tomcat server and an IDE such as Eclipse.
+2. Create a new servlet class, for example, "AddNumbersServlet".
+3. Override the `service()` method in the servlet class. This method will handle the post request from the client browser.
+4. In the `service()` method, extract the two numbers from the request parameters.
+5. Perform the addition operation on the two numbers.
+6. Store the result in a variable.
+7. Write the result back to the client browser using the response object.
+8. Map the servlet to a specific URL in the web.xml file.
+9. Create an HTML form in a client-side web page that allows the user to enter two numbers.
+10. Use JavaScript or jQuery to make an HTTP post request to the servlet with the two numbers as parameters.
+11. Handle the response from the servlet, which should be the result of the addition operation.
+12. Display the result to the user in the client-side web page.
 
 ### web.xml file
 
@@ -43,5 +42,8 @@ To enforce the handling of only POST method requests, the doPost() method should
 
 - The doPost method can be used instead of the service method to enforce that only POST method requests will be handled.
 
-### Req Dispatcher vs Redirect, for calling a servlet from another servlet 
-Regarding the difference between the Request Dispatcher and Redirect methods for calling a servlet from another servlet, Request Dispatcher is used to forward the request to another resource within the same application, while Redirect is used to redirect the request to a different resource, either within the same application or on a different server.
+### Req Dispatcher vs Redirect
+-Request Dispatcher is used to forward the request to another resource within the same application. 
+-Redirect is used to redirect the request to a different resource, either within the same application or on a different server.
+
+### Calling a Servlet from another Servlet
