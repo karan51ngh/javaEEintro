@@ -64,7 +64,7 @@ To enforce the handling of only POST method requests, the doPost() method should
 
 -You do not need to create the objects yourself, but you can access and modify the values in the objects as needed for your application.
 
-# Servlet Request Forwarding
+### Servlet Request Forwarding
 
 -When a client sends a request to a servlet `S1`, it is accompanied by request and response objects `req1` and `res1`. 
 
