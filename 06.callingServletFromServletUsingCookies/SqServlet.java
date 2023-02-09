@@ -10,10 +10,18 @@ import javax.servlet.http.HttpServletResponse;
 public class SqServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException
 	{
-
-		HttpSession session = req.getSession();
+		int k =0;
+		Cookie[] cookies = req.getCookies(); // cookies not cookie, therefore it will be an array
 		
-		int k = (int)session.getAttribute("k");
+		for(javax.servlet.http.Cookie c: cookies)
+		{
+			if(c.getName().equals("k"))
+			{
+				k = Integer.parseInt(c.getValue());
+			}
+		}
+		
+		
 		k = k*k;
 		PrintWriter out = res.getWriter();
 		out.println("Result is  "+k);

@@ -18,8 +18,8 @@ public class AddServlet extends HttpServlet
 		
 		int k = i + j;
 		
-		HttpSession session = req.getSession(); // we are sending data using session
-		session.setAttribute("k", k);
+		Cookie cookie = new Cookie("k",k + ""); // we have to send a string no tin , that's why + ""
+		res.addCookie(cookie);
 		
 		res.sendRedirect("sq");
 	}

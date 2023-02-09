@@ -43,8 +43,8 @@ To enforce the handling of only POST method requests, the doPost() method should
 - The doPost method can be used instead of the service method to enforce that only POST method requests will be handled.
 
 ### Req Dispatcher vs Redirect
--Request Dispatcher is used to forward the request to another resource within the same application. 
--Redirect is used to redirect the request to a different resource, either within the same application or on a different server.
+- Request Dispatcher is used to forward the request to another resource within the same application. 
+- Redirect is used to redirect the request to a different resource, either within the same application or on a different server.
 
 ### Calling a Servlet from another Servlet and sharing data using Request Dispatcher
 1. Create a new servlet for calculating the square.
@@ -91,3 +91,7 @@ the client is informed and instructed to access `S2`.
 - This allows the server to maintain state across multiple requests, which is useful for tracking user preferences, keeping track of a shopping cart, or managing user authentication. 
 
 - The session data is stored on the server and is typically stored in memory, but it can also be stored in a database or other persistent storage mechanism.
+
+### Cookies
+
+Cookies are small text files that are stored on the user's device by a website. They are used to store data that the website needs to remember, such as user preferences, login information, and other data that may be required across multiple visits to the website. Cookies are sent back and forth between the user's browser and the website, allowing the website to identify the user and persist data between visits. They are typically stored in the user's browser and have a specified lifetime, after which they expire and are deleted from the user's device.
