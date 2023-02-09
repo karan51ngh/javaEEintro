@@ -46,4 +46,10 @@ To enforce the handling of only POST method requests, the doPost() method should
 -Request Dispatcher is used to forward the request to another resource within the same application. 
 -Redirect is used to redirect the request to a different resource, either within the same application or on a different server.
 
-### Calling a Servlet from another Servlet
+### Calling a Servlet from another Servlet using Request Dispatcher
+1. Create a new servlet for calculating the square.
+2. using Request Dispatcher forward a request from one Servlet to another Servlet. (from add to sq in our example)
+3. Session management can be used to share data between servlets
+4. Another way to send data is by adding data to the request object, which is being forwarded from one servlet to another. 
+5. This approach is not recommended for sharing large amounts of data, as the data is stored in memory and can quickly consume server resources.
+6. ALso add a new mapping to the web.xml file.
