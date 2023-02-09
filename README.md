@@ -56,38 +56,38 @@ To enforce the handling of only POST method requests, the doPost() method should
 
 ### Servlet Request and Response
 
--The `request` object holds the data sent from the client to the server in the form of HTTP request parameters, headers, and other information. 
+- The `request` object holds the data sent from the client to the server in the form of HTTP request parameters, headers, and other information. 
 
--The `response` object is used to send a response from the server to the client, which can be in the form of text, JSON, video, or other formats.
+- The `response` object is used to send a response from the server to the client, which can be in the form of text, JSON, video, or other formats.
 
--In a servlet, the `request` and `response` objects are typically passed as arguments to the `service` method, and are created by the servlet container (such as Apache Tomcat). 
+- In a servlet, the `request` and `response` objects are typically passed as arguments to the `service` method, and are created by the servlet container (such as Apache Tomcat). 
 
--You do not need to create the objects yourself, but you can access and modify the values in the objects as needed for your application.
+- You do not need to create the objects yourself, but you can access and modify the values in the objects as needed for your application.
 
 ### Servlet Request Forwarding
 
--When a client sends a request to a servlet `S1`, it is accompanied by request and response objects `req1` and `res1`. 
+- When a client sends a request to a servlet `S1`, it is accompanied by request and response objects `req1` and `res1`. 
 
--Instead of sending a response directly to the client, `S1` can use a `RequestDispatcher` to forward the request to another servlet `S2` along with the same `req1` and `res1` objects. 
+- Instead of sending a response directly to the client, `S1` can use a `RequestDispatcher` to forward the request to another servlet `S2` along with the same `req1` and `res1` objects. 
 
--`S2` will then send the response back to the client using `res1`. 
+- `S2` will then send the response back to the client using `res1`. 
 The client is unaware of which servlet actually sent the response.
 
--If you want the client to be aware that the request has been redirected, you can use the `sendRedirect` method instead of a `RequestDispatcher`. 
+- If you want the client to be aware that the request has been redirected, you can use the `sendRedirect` method instead of a `RequestDispatcher`. 
 
--In the case of a `RequestDispatcher`, the request is simply forwarded, while in the case of `sendRedirect`, 
+- In the case of a `RequestDispatcher`, the request is simply forwarded, while in the case of `sendRedirect`, 
 the client is informed and instructed to access `S2`.
 
 ### HttpSession
 
--Session is a mechanism used in web applications to store information about a user's session on a website.
+- Session is a mechanism used in web applications to store information about a user's session on a website.
 
--This information is stored on the server and is associated with a unique session ID. 
+- This information is stored on the server and is associated with a unique session ID. 
 
--This ID is sent to the client as a cookie, and the client uses it to send the session ID back to the server with each subsequent request. 
+- This ID is sent to the client as a cookie, and the client uses it to send the session ID back to the server with each subsequent request. 
 
--This allows the server to associate the incoming request with a specific session, and to retrieve the session data for that user. 
+- This allows the server to associate the incoming request with a specific session, and to retrieve the session data for that user. 
 
--This allows the server to maintain state across multiple requests, which is useful for tracking user preferences, keeping track of a shopping cart, or managing user authentication. 
+- This allows the server to maintain state across multiple requests, which is useful for tracking user preferences, keeping track of a shopping cart, or managing user authentication. 
 
--The session data is stored on the server and is typically stored in memory, but it can also be stored in a database or other persistent storage mechanism.
+- The session data is stored on the server and is typically stored in memory, but it can also be stored in a database or other persistent storage mechanism.
