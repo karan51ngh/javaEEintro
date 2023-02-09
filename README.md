@@ -53,3 +53,14 @@ To enforce the handling of only POST method requests, the doPost() method should
 4. Another way to send data is by adding data to the request object, which is being forwarded from one servlet to another. 
 5. This approach is not recommended for sharing large amounts of data, as the data is stored in memory and can quickly consume server resources.
 6. ALso add a new mapping to the web.xml file.
+
+### Servlet Request and Response
+# Servlet Request and Response
+
+-The `request` object holds the data sent from the client to the server in the form of HTTP request parameters, headers, and other information. 
+
+-The `response` object is used to send a response from the server to the client, which can be in the form of text, JSON, video, or other formats.
+
+-In a servlet, the `request` and `response` objects are typically passed as arguments to the `service` method, and are created by the servlet container (such as Apache Tomcat). 
+
+-You do not need to create the objects yourself, but you can access and modify the values in the objects as needed for your application.
